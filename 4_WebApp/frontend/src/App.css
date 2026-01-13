@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --neon-blue: #00f2ff;
+  --neon-purple: #bc13fe;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0c29;
+  background-image: linear-gradient(315deg, #0f0c29 0%, #302b63 74%, #24243e 100%);
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.highlight {
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass Panels */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+}
+
+/* Main Layout */
+.main-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Camera Box */
+.camera-box {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-stream {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.live-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.overlay-letter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.7);
+  color: var(--neon-blue);
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: 2px solid var(--neon-blue);
+}
+
+/* Output Box */
+.output-box {
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sentence-display {
+  width: 90%;
+  height: 150px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px;
+  resize: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Buttons */
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.space { background: #444; }
+.backspace { background: #ff4757; }
+.clear { background: #ffa502; }
+
+.speak-btn {
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.speak-btn:hover {
+  transform: scale(1.05);
+}
